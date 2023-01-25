@@ -8,22 +8,34 @@
 #include "model_cli.hpp"
 #include "view_cli.hpp"
 #include "ctrl_cli.hpp"
+#include "versioning.hpp"
 
 using namespace std::literals::string_literals;
 
+//  MARK: - Definitions
 #define sfy(str) #str ": "
+
+//  MARK: - Constants.
+//  Program version
+static
+versioning v_r_m(1, 0, 0);
 
 static
 auto const file_nm = "./numbers.txt"s;
 static
+
+//  MARK: Local function prototypes.
 inline
 void deets(int argc, char const * argv[]);
+
 
 /*
  *  MARK:  main()
  */
 int main(int argc, char const * argv[]) {
-  std::cout << "StreamInputter00\n"s;
+  std::cout << "StreamInputter00 - Ver "s
+            << v_r_m.vrm()
+            << std::endl;
   std::cout << "In function "s << __func__ << "()"s
             << std::endl;
 
@@ -37,6 +49,7 @@ int main(int argc, char const * argv[]) {
 
 /*
  *  MARK:  deets()
+ *  Compile-time details.
  */
 static
 inline

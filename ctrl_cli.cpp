@@ -19,6 +19,9 @@ auto const dl2 = std::string(40, '`');
 static
 auto const dl3 = std::string(40, '~');
 
+/*
+ *  MARK:  menu00()
+ */
 cli_ctrl & menu00(cli_ctrl & troller) {
   std::cout << "In function "s << __func__ << "()"s
             << std::endl;
